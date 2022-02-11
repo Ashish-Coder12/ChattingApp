@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.allchats{
+  width: 25vw;
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+    top: 0;
+    background-color: white;
+}
+.messagesarea{
+  width: 75vw;
+  height: 100vh;
+  background-color: white;
+  position: relative;
+  top: 0;
+}
+.blank{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.inputmesage{
+  width: 60vw;
+}
+.sentmessage{
+  position: fixed;
+  bottom: 0;
+  width: fit-content;
+  box-shadow: 0px -3px 7px grey;
+}
+.senddiv{
+  width: 15vw ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userbutton{
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+.backbutton{
+  display: none;
+}
+@media(max-width:768px){
+  .inputmesage{
+    width: 75vw;
+  }
+  .senddiv{
+    width: 25vw ;
+  }
+  .backbutton{
+    display: flex;
+    justify-content: flex-start;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: none;
+    width: 30%;
+  }
+  .backbutton img{
+    height: 20px;
+    width: 20px;
+  }
+  .app{
+    display: block;
+  }
+  .allchats{
+    width: 100vw;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+  }
+  .messagesarea{
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+  }
+  .index{
+    z-index: 101;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+/* user profile */
+.userprofilearea{
+  box-shadow: 1px 1px 5px rgb(80, 80, 80);
+  /* height: 70px; */
+  position: sticky;
+  top: 0px;
+  background-color: white;
 }
+.serchuser{
+  border: 1px solid #FF523E;
+  border-radius: 2rem;
+  margin: 10px ;
+  outline: none;
+}
+.user{
+  /* border: 1px solid black; */
+  width: 97%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgb(80, 80, 80);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.profileimage{
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: #FF523E;
+  border: 1px solid #FF523E;
 }
